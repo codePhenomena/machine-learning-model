@@ -1,0 +1,126 @@
+## 🧠 K-Nearest Neighbors (KNN) Classifier from Scratch
+
+This project implements the **K-Nearest Neighbors (KNN)** classification algorithm from scratch in Python using the popular **Iris dataset** from `sklearn.datasets`. It demonstrates fundamental concepts behind distance-based learning and evaluates classification accuracy without using high-level machine learning libraries.
+
+---
+
+### 📁 Files & Structure
+
+```
+.
+├── knn_classifier.py      # Your KNN implementation (optional if using Jupyter)
+├── README.md              # This file
+└── knn_from_scratch.ipynb # Interactive Jupyter Notebook version
+```
+
+---
+
+### 📌 Objective
+
+> Classify Iris flower species (`Setosa`, `Versicolor`, `Virginica`) using KNN, based on 4 features:
+>
+> * Sepal length
+> * Sepal width
+> * Petal length
+> * Petal width
+
+---
+
+### 🧪 Dataset Info
+
+* **Dataset:** [Iris Flower Dataset](https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html)
+* **Classes:** `Setosa`, `Versicolor`, `Virginica`
+* **Features:** 4 numeric values per sample
+* **Size:** 150 samples
+
+---
+
+### 🧾 Requirements
+
+```bash
+pip install numpy scikit-learn
+```
+
+---
+
+### ▶️ How to Run
+
+You can use the code in a `.py` script or Jupyter Notebook.
+
+#### Option 1: Jupyter Notebook (recommended for interactive learning)
+
+```bash
+jupyter notebook knn_from_scratch.ipynb
+```
+
+#### Option 2: Python Script
+
+```bash
+python knn_classifier.py
+```
+
+---
+
+### 🧩 Code Highlights
+
+#### 1. Load Data
+
+```python
+from sklearn import datasets
+iris = datasets.load_iris()
+X = iris.data
+y = iris.target
+```
+
+#### 2. Split Data
+
+```python
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+```
+
+#### 3. Implement KNN
+
+```python
+from collections import Counter
+
+def euclidean_distance(x1, x2):
+    return np.sqrt(np.sum((x1 - x2) ** 2))
+
+class KNNClassifier:
+    ...
+```
+
+#### 4. Train & Predict
+
+```python
+model = KNNClassifier(k=5)
+model.fit(X_train, y_train)
+y_pred = model.predict(X_test)
+```
+
+#### 5. Evaluate
+
+```python
+from sklearn.metrics import accuracy_score
+accuracy_score(y_test, y_pred)
+```
+
+---
+
+### ✅ Output Example
+
+```bash
+Accuracy: 1.0000
+```
+
+---
+
+### 🧠 Concepts Learned
+
+* Distance-based classification
+* Euclidean distance
+* Manual implementation of ML algorithms
+* Importance of data preprocessing
+
+---
