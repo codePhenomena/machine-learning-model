@@ -1,0 +1,109 @@
+
+## 📘 Linear Regression from Scratch – Home Price Prediction
+
+### 🚀 Overview
+
+This project demonstrates how to build a **Linear Regression model from scratch using NumPy** to predict house prices based on area (in square feet).
+It includes:
+
+* Data preprocessing (feature scaling)
+* Gradient descent implementation
+* Loss tracking
+* Visualization of results
+
+---
+
+### 📂 Project Structure
+
+```
+ml_model/
+└── linear_regression/
+    ├── home_prices.csv        # Dataset with 'area_sqr_ft' and 'price_lakhs'
+    └── linear_regression.py   # Main Python script
+```
+
+---
+
+### 📦 Requirements
+
+Make sure you have the following libraries installed:
+
+```bash
+pip install numpy pandas matplotlib scikit-learn
+```
+
+---
+
+### 📄 Dataset Format
+
+CSV should contain two columns:
+
+| area\_sqr\_ft | price\_lakhs |
+| ------------- | ------------ |
+| 1000          | 50           |
+| 1500          | 75           |
+| ...           | ...          |
+
+---
+
+### 🧠 Model Description
+
+This implementation uses:
+
+* **Gradient Descent** to minimize **Mean Squared Error**
+* **StandardScaler** to normalize data for stable convergence
+* **Manual weight and bias updates**
+
+---
+
+### ▶️ How to Run
+
+```bash
+python linear_regression.py
+```
+
+You'll see output like:
+
+```
+Iteration 0: Loss = 0.8514
+Iteration 100: Loss = 0.5678
+...
+Iteration 9900: Loss = 0.5564
+```
+
+A plot will pop up showing actual vs predicted prices.
+
+---
+
+### 📊 Output Visualization
+
+* Blue dots: Actual data points (area vs price)
+* Red line: Fitted regression line from model
+
+<p align="center">
+  <img src="https://i.imgur.com/OVY3JxX.png" width="500" alt="Regression Plot Example">
+</p>
+
+---
+
+### 🔍 Key Concepts Covered
+
+| Concept             | Description                                        |
+| ------------------- | -------------------------------------------------- |
+| Linear Regression   | Predicts output from linear relationship           |
+| Gradient Descent    | Optimizes weights to minimize error                |
+| Feature Scaling     | Prevents exploding gradients by standardizing data |
+| Loss Function (MSE) | Measures prediction error                          |
+
+---
+
+### ✅ What Works
+
+* Handles large value ranges with proper scaling
+* No external ML libraries like `sklearn.linear_model` are used for learning
+* Outputs interpretable plots
+
+
+
+
+
