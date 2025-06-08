@@ -1,0 +1,103 @@
+
+# 🧠 Logistic Regression From Scratch
+
+This project demonstrates how to build a Logistic Regression model **from scratch using NumPy** to predict **home affordability** based on area (sq ft) and price (in lakhs).
+
+---
+
+## 📁 Dataset Format
+
+Your CSV file should be named `affordable.csv` and contain the following columns:
+
+| area_sqr_ft | price_lakhs | affordable |
+|-------------|--------------|------------|
+| 600         | 20           | 1          |
+| 850         | 40           | 0          |
+| ...         | ...          | ...        |
+
+- **`area_sqr_ft`**: Area of the home in square feet.
+- **`price_lakhs`**: Price of the home in lakhs (INR).
+- **`affordable`**: Binary target (1 = affordable, 0 = not affordable).
+
+---
+
+## 🛠 Features
+
+- Logistic Regression implemented **from scratch** using only NumPy.
+- Gradient descent optimization.
+- Feature scaling using `StandardScaler`.
+- Accuracy evaluation.
+- Interactive visualization using Matplotlib.
+
+---
+
+## 📦 Dependencies
+
+Make sure to install the following Python packages:
+
+```bash
+pip install numpy pandas matplotlib scikit-learn
+````
+
+---
+
+## 📓 Run in Jupyter Notebook
+
+### Step-by-step Notebook Cells
+
+1. **Import libraries**: NumPy, Pandas, Matplotlib, Scikit-learn
+2. **Load dataset** from CSV
+3. **Define Logistic Regression** class with training, sigmoid, loss, and predict logic
+4. **Train and evaluate** the model
+5. **Visualize** predictions in 2D space
+
+---
+
+## 📈 Sample Accuracy Output
+
+```
+Iteration 0: Log Loss = 0.6931
+...
+Iteration 900: Log Loss = 0.2517
+
+Model Accuracy: 0.8571
+```
+
+---
+
+## 📊 Visualization
+
+A scatter plot visualizes predicted classifications (affordable vs not affordable), colored by class.
+
+---
+
+## 📄 Example CSV Generation (For Testing)
+
+You can create a test file like this in the notebook:
+
+```python
+sample_data = {
+    "area_sqr_ft": [600, 850, 900, 1100, 1300, 750, 1000],
+    "price_lakhs": [20, 40, 35, 60, 75, 28, 45],
+    "affordable":  [1,   0,  1,  0,  0,  1,  0]
+}
+df = pd.DataFrame(sample_data)
+df.to_csv("affordable_homes.csv", index=False)
+```
+
+---
+
+## ✅ Future Improvements
+
+* Add confusion matrix and classification report
+* Support for mini-batch gradient descent
+* Decision boundary visualization for 2D features
+
+---
+
+## 🧑‍💻 Author
+
+Built for ML practice and educational use.
+
+
+```
